@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css';
 //import './assets/scss/mdb-free.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router } from "react-router-dom";
+import Auth0ProviderWithHistory from './auth/Auth0ProviderWithHistory';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
+    <Auth0ProviderWithHistory>
     <App />
-  </React.StrictMode>,
+    </Auth0ProviderWithHistory>
+  </Router>,
   document.getElementById('root')
 );
 
