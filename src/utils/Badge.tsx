@@ -8,6 +8,8 @@ type BadgeProps = {
 export const Badge = (props: BadgeProps) => {
 
 
+
+    
     return <>
     {
     props.amount === 0 ?
